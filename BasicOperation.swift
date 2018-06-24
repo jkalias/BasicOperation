@@ -35,13 +35,17 @@ class BasicOperation: Operation
     }
     
     @objc dynamic override var isReady: Bool {
+        var finishedCount = 0
         for dep in dependencies {
             if dep.isCancelled {
                 return false
             }
             if dep.isFinished {
-                return true
+                finishedCount = finishedCount + 1
             }
+        }
+        if !dependencies.isEmpty {
+            return dependencies.count == finishedCount
         }
         return state == .ready
     }
