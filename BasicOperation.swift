@@ -1,9 +1,5 @@
 //
 //  BasicOperation.swift
-//  KidsWardrobe
-//
-//  Created by Ioannis Kaliakatsos on 24/06/2018.
-//  Copyright © 2018 Ioannis Kaliakatsos. All rights reserved.
 //
 
 import Foundation
